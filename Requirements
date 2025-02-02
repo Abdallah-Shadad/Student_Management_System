@@ -1,0 +1,100 @@
+# Student Management System - Requirements Document
+
+## 1. Introduction
+
+The **Student Management System (SMS)** is designed to manage student information efficiently. It provides functionalities to add, display, search, edit, remove, and sort student data. This system is built to demonstrate Object-Oriented Programming (OOP) principles, including encapsulation, inheritance, polymorphism, and abstraction.
+
+## 2. Functional Requirements
+
+### 2.1 Add a New Student
+
+- **Description:** The system shall allow the user to add a new student.
+- **Required Fields:**
+    - Student ID (integer)
+    - Full Name (string)
+    - Age (integer)
+    - Grade (float)
+    - Email (string)
+    - Address (string)
+    - Phone Number (string)
+
+### 2.2 Display All Students
+
+- **Description:** The system shall display a list of all students with their details.
+- **Displayed Information:**
+    - Student ID
+    - Full Name
+    - Age
+    - Grade
+    - Email
+    - Address
+    - Phone Number
+
+### 2.3 Search for a Student
+
+- **Description:** The system shall allow searching for students based on:
+    - Student ID
+    - Full Name
+    - Grade Range
+- **Outcome:**
+    - Display matching student information.
+    - Notify the user if no student is found.
+
+### 2.4 Edit a Student
+
+- **Description:** The system shall allow editing student details.
+- **Editable Fields:**
+    - Full Name
+    - Grade
+    - Email
+    - Address
+    - Phone Number
+- **Process:**
+    - Identify the student using the Student ID.
+    - Notify the user upon successful or failed updates.
+
+### 2.5 Remove a Student
+
+- **Description:** The system shall allow removing a student using the Student ID.
+- **Process:**
+    - Confirm deletion with the user.
+    - Notify the user of successful removal or if the student is not found.
+
+### 2.6 Sort Students
+
+- **Description:** The system shall sort students based on different criteria:
+    - Student ID (ascending/descending)
+    - Full Name (alphabetically)
+    - Grade (highest to lowest)
+- **Additional Features:**
+    - Multi-level sorting (e.g., sort by grade, then by name).
+
+### 2.7 Exit
+
+- **Description:** The system shall allow the user to exit the application gracefully.
+- **Feature:**
+    - Save current session data before exiting (if applicable).
+
+## 3. Non-Functional Requirements
+
+- The system shall provide clear and concise messages to guide the user.
+- The system shall handle invalid input gracefully.
+- The system shall perform efficiently even with large datasets.
+
+## 4. Technical Requirements
+
+- **Programming Language:** C++
+- **Standard Libraries:** iostream, fstream, algorithm, string, vector
+- **Custom Headers:** Student.h, StudentManager.h, Statistics.h
+- **OOP Concepts:**
+    - **Encapsulation:** Secure student data with private attributes and public getters/setters.
+    - **Inheritance:** Base class `Person`, derived class `Student`.
+    - **Polymorphism:** Implement functions like `displayInfo()` that behave differently for different classes.
+    - **Abstraction:** Abstract common functionalities into reusable methods.
+
+## 5. Future Enhancements
+
+- Add a graphical user interface (GUI).
+- Implement user authentication and role-based access control.
+- Integrate with a database for persistent storage.
+- Enable real-time data updates in multi-user environments.
